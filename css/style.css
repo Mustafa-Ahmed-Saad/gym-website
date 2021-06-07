@@ -1,0 +1,280 @@
+/* Roboto Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Colors Used: #08D9D6  -  #252A34  -  #FF2E63  -  #EAEAEA */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* عشان ادي بودر او مارجين او بادينج براحتي بدون ما يتحسب م العرض الرئيسي للبوكس او العنصر */
+}
+
+/* Main Style */
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6rem;
+  color: #252a34;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Utility Classes */ /* يعني الكلاسات اللي بتتكرر و بستخدمها اكتير */
+.container {
+  max-width: 80%;
+  margin: auto;
+}
+
+.primary-text {
+  color: #ff2e63;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-dark {
+  background-color: #252a34;
+  color: #fff;
+}
+
+.bg-light {
+  background-color: #eaeaea;
+}
+
+.bg-primary {
+  background-color: #08d9d6;
+  color: #fff;
+}
+
+.btn {
+  background-color: #08d9d6;
+  padding: 0.5rem 1.25rem;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #ff2e63;
+}
+
+.btn-dark {
+  background-color: #252a34;
+}
+
+.py-1 {
+  padding: 1.5rem 0;
+}
+
+.py-2 {
+  padding: 2rem 0;
+}
+
+.py-3 {
+  padding: 3rem 0;
+}
+
+.p-1 {
+  padding: 1.5rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+.l-heading {
+  font-size: 3rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.m-heading {
+  font-size: 2rem;
+  line-height: 2;
+}
+
+.lead {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.box-shadow {
+  box-shadow: 0 0 7px #252a34;
+}
+/* Section: Navbar */
+#navbar {
+  display: flex;
+  justify-content: space-between; /* علشان يخلي المسافة الكبيرة بين اليو ال لالي فيها اللينكات و اللوجو */
+  /*align-items: center;*/ /* علشان يخلي الايتم في السينتر من حيث الطول يعني يوسطنها علي محور الواي */
+  padding: 0.75rem; /* الواحد ريم حوالي 16 بكسل و الريم بتكون افضل في الريسبونسيف */
+  position: sticky; /* علشان اثبتها معايا لما اعمل سكرول */
+  top: 0;
+  z-index: 1; /* علشان لما تثبت معايا و تاخد بوزيشن ستيكي الزيد اندكس ب 1 فيبقي فوق الكل */
+}
+
+#navbar .logo img {
+  width: 80px;
+  display: block;
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+#navbar ul li a {
+  padding: 1rem;
+  color: #fff;
+}
+
+#navbar ul li a:hover {
+  background-color: #08d9d6;
+  border-radius: 5px;
+}
+
+/* Showcase */
+#showcase {
+  /* هدي باك جراوند للسيكشن دا بحيث اول حاجة اديلو لون علشان لو حصل حاجة في الصور اللون هوا اللي يبان و بعدين باك جراوند ايميج لينك الصورة اللي هتتحط باك جراوند و بعدين الريبيت نو ريبيت علشان متتكررش و بعدين باك جراوند بوزيشن سينتر من اليمين و الشمال و بعدين سينتر من فق و تحت و بعدين باك جراوند سايز كافر علشان يفهم انها خلفية */
+  background: #252a34 url(../img/showcase.jpg) no-repeat center center/cover;
+  height: 100vh; /* علشان تاخد الطول الكلي */
+  /*width: 100vw;*/ /* لو عاوزها تاخد العرض الكلي */
+  color: #fff;
+}
+
+.showcase-content {
+  display: flex; /* اول ما اديلو ديسبلاي فليكس العناصر هتيجي جنب بعض و انا مش عاوز كدا فهعمل التالي */
+  flex-direction: column; /* هقولو الفليكس ديريكشن كولوم علشان اخلي بدل ما العناصر بتترتب افقي و دا الديفولت بتاع الفليس هخلي انا بقي الفليكس ديريكشن كولوم علشان اخلي العناصر تيجي تحت بعض مش جنب بعض */
+  justify-content: center; /* علشن اخلي الديف اللي فية الكلام و الزرار يتسنتر في النص بالنسبة لمحور لبواي بس كدا برضو مش هتلاقي حصل حاجة لانو مش شايف ططول معين علشان يسنتر العنصر بالنسبة للطول دا فلازم انا ادي طول معين ففي السطر اللي بعد كدا هدي كول مية في المية علشان يلاقي طول فيسنتر العنصر بناء علي الطول دا */
+  height: 100%; /* علشان يقدر يينتر العنصر بناء علي الطول دا و يعملو جستيفاي كونتينت سينتر */
+  align-items: center; /* هقولو الين ايتم سبنتر علشان يسنترلي كل حاجة في النص بالظبط بالنسبة لمحور الاكس و هيخلي البوتوم يظبط مش ياخد العرض كلو خلي بالك لو جيت تستخدم التكست الين سينتر ممكن مش تشتغل لانك هنا في الفليكس فالافضل انك تستخدم الين ايتم */
+  padding: 1.5rem;
+
+  /* overlay */
+  background-color: rgba(0, 0, 0, 0.9); /* علشان اعمل الباك جراوند الشفافة */
+}
+
+/* Section: About */
+#about .about-content {
+  display: flex;
+  justify-content: space-between; /* علشان المساحة الباقية من العرض تكون بين الديفين او العناصر اللي موجودة */
+  align-items: center; /* علشان توازي و تخلي الايتيم في السينتر */
+}
+
+#about .about-content div,
+#about .about-content img {
+  flex: 1;
+}
+
+#about .about-content img {
+  display: block;
+  width: 50%;
+  border: 5px solid #fff;
+  margin-left: 1rem;
+}
+
+/* cta */
+#cta {
+  background: #252a34 url(../img/cta.jpg) no-repeat center center/cover;
+  color: #fff;
+}
+
+#cta .cta-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 350px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Our Programs */
+#programs .boxes {
+  display: flex;
+  justify-content: space-between;
+}
+
+#programs .boxes .box {
+  flex: 1;
+}
+
+#programs .boxes .box img {
+  width: 70px;
+  background-color: #08d9d6;
+  padding: 0.5rem; /* علشان لما اخلي الباك جراوند دايرة و اعمل بوردر ريديوس الصورة متتكلش */
+  border-radius: 100%;
+  color: #252a34;
+}
+
+/* Trainers */
+#trainers .trainer-boxes {
+  display: flex;
+}
+
+#trainers .trainer-boxes .trainer-box {
+  flex: 1;
+  background-color: #fff;
+  margin: 1rem;
+  border-radius: 5px;
+}
+
+#trainers .trainer-boxes .trainer-box img {
+  width: 100%; /* بتاخد العرض كلو اللي هوا الفليكس واحد */
+  display: block; /* علشان ميجيش حاجة جنبها */
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#trainers .trainer-boxes .trainer-box ul {
+  display: flex;
+  list-style: none;
+}
+
+#trainers .trainer-boxes .trainer-box ul li {
+  margin-right: 0.75rem;
+}
+
+#trainers .trainer-boxes .trainer-box ul li i {
+  color: #252a34;
+}
+
+#trainers .trainer-boxes .trainer-box ul li i:hover {
+  color: #ff2e63;
+}
+
+/* Contact  */
+#contact {
+  display: flex;
+}
+
+#contact .contact-us,
+#contact .map {
+  flex: 1;
+}
+
+#contact .contact-us input,
+#contact .contact-us textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  margin-bottom: 1rem;
+  outline: none;
+}
+
+#contact .contact-us .form-group {
+  display: flex;
+}
+
+#contact .contact-us .form-group input[type='text'] {
+  margin-right: 0.75rem;
+}
